@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   def index
-    # @posts = Post.page(params[:page]).order(created_at: :desc).per(4)
     @new_posts = Post.all.find_newest_article
   end
   def new
