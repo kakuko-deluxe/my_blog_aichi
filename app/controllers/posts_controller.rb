@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all #全件取得
+    @new_posts = Post.all 
   end
   def new
     @post = Post.new
