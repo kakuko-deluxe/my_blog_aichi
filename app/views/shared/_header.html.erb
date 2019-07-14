@@ -8,10 +8,10 @@
       <li class="nav-item">
         <%= link_to "Home", root_path, class: "nav-link" %>
       </li>
+      <% if user_signed_in? %>
       <li class="nav-item">
         <%= link_to "New Post", new_post_path, class: "nav-link" %>
       </li>
-      <% if user_signed_in? %>
       <li class="nav-item">
         <%= link_to "設定変更", edit_user_registration_path, class: "nav-link" %>
       </li>
